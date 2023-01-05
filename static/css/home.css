@@ -1,0 +1,39 @@
+form input {
+    margin: 1em;
+    padding: 1em;
+}
+
+hr {
+    padding: 0;
+    border-color: black;
+    border-style: solid;
+    width: 80%;
+}
+
+.modal-link {
+    width: 80%;
+    display: inline-block;
+    background-color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    padding: 1em;
+    margin: 1em;
+}
+
+.modal-link:hover {
+    background-color: rgb(194, 241, 255);
+}
+
+.main-container {
+    padding: 2em;
+}
+
+.modal h2 {
+    text-transform: uppercase;
+}
+
+.modal p {
+    padding: 1em;
+    background-color:rgb(199, 199, 199);
+}

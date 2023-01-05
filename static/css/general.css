@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 135);
+    text-align: center;
+    font-family: "Montserrat";
+}
+
+.page-title {
+    text-transform: uppercase;
+}
+
+form input {
+    font-family: "Montserrat";
+}

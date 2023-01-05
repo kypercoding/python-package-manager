@@ -1,0 +1,16 @@
+.form-container {
+    padding: 1em;
+}
+
+.form-container div {
+    margin: 1em;
+}
+
+.form-container form {
+    display: inline-block;
+}
+
+.form-container input {
+    margin: auto;
+    padding: 1em;
+}

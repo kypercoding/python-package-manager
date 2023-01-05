@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="static/css/general.css">
+        <link rel="stylesheet" href="static/css/form.css">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1 class="page-title">Login!</h1>
+
+        <!-- Login form -->
+        <div class="form-container">
+            <form action="/authenticate" method="POST">
+                <div>
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div>
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

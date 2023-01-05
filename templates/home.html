@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="static/css/general.css">
+        <link rel="stylesheet" href="static/css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <body>
+        <h1 class="page-title">Dashboard</h1>
+
+        <hr>
+
+        <div>
+            <form action="/add-environment" method="POST">
+                <div>
+                    <input type="text" name="name" placeholder="Type environment name here">
+                </div>
+                <div>
+                    <input type="submit" value="Create Environment">
+                </div>
+            </form>
+
+            <form action="/delete-environments" method="POST">
+                <input type="submit" value="Delete Environments">
+            </form>
+
+            <form action="/logout" method="POST">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
+
+        <hr>
+
+        <div class="main-container">
+            {% block content %}
+                {% for environment in environments %}
+                <div>
+                    <div id="{{ environment['json_data']['envID'] }}" class="modal">
+                        <h2>{{ environment['json_data']['name'] }}</h2>
+
+                        <p>{{ environment['json_data']['packages']|join(" ") }}</p>
+
+                        <form action="/add-packages" method="POST">
+                            <label>Add Packages:</label>
+                            <input type="text" name="packages" placeholder="Packages separated by spaces">
+                            <input type="hidden" name="env_id" value="{{ environment['json_data']['envID'] }}">
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                    <div>
+                        <a href="#{{ environment['json_data']['envID'] }}" class="modal-link" rel="modal:open">
+                            {{ environment['json_data']['name'] }}
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

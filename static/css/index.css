@@ -1,0 +1,13 @@
+.login-bar a {
+    background-color: white;
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 1em;
+    margin: 1em;
+}
+
+.login-bar a:hover {
+    background-color: rgb(194, 241, 255);
+}

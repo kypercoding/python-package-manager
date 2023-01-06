@@ -19,7 +19,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 # set configurations
 HOST = os.environ.get("HOST") if not None else None
 PORT = int(os.environ.get("PORT")) if os.environ.get("PORT") is not None else None
-DB_NUM = int(os.environ.get("PORT")) if os.environ.get("PORT") is not None else None
+DB_NUM = int(os.environ.get("DB")) if os.environ.get("DB") is not None else None
 
 # base url declaration
 BASE_URL = os.environ.get("BASE_URL")

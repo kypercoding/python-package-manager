@@ -72,6 +72,16 @@ To delete all your environments, click "Delete Environments". This will clear al
 
 To logout, click "Logout".
 
+## Tasks
+- [x] Implemented basic creation of GET, POST, DELETE, and PUT endpoints of package-manager-api.
+- [x] Created a functional front-end that takes in basic text input.
+- [x] Implemented a basic Redis-based cache of users' JWT tokens.
+- [x] Deployed on DigitalOcean Droplet.
+- [ ] Handle inactive JWT tokens in the Redis cache.
+- [ ] Significantly spruce up the front-end with more jQuery UI elements and/or other user-friendly elements.
+
+More tasks may appear as time goes on.
+
 ## Notes
 
 * This project was inspired by an older project called "py-pro-manager" (Python Project Manager). This web application, however, makes use of API calls to store environment data, allowing for higher-level programming in managing Python environments and packages (as opposed to a direct interaction between web application and database).

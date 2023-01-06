@@ -4,7 +4,13 @@
 
 The goal of this web application is to manage Python environments and packages on a high-level. This web application makes use of another project, the [package-manager-api]("https://github.com/kypercoding/package-manager-api"), as a backend service to store all Python environments and packages. The web application itself manages users through Flask-Login and JWT tokens, utilizing the Redis database to keep track of users' tokens.
 
-To access the deployed web application, click here: [LINK].
+A brief visual overview of the application's functionality can be seen below:
+
+![](/Python%20Package%20Manager%20Diagram.jpg)
+
+## Deployment
+
+This web application was deployed on a DigitalOcean Droplet, configured with nginx, gunicorn, and Let's Encrypt. To access the deployed web application, click on: [LINK](https://www.ppm.kyperapps.com).
 
 ## Install
 
@@ -22,7 +28,7 @@ To locally use the program:
 5. Run the Redis server on a host, port, and database of your choice (remember these for the next step).
 6. Run server.py with the command-line arguments:
 
-```
+```shell
 python server.py BASE_URL HOST PORT DB
 ```
 
@@ -68,4 +74,4 @@ To logout, click "Logout".
 
 ## Notes
 
-* This project was inspired by an older project called "py-pro-manager" (Python Project Manager). This web application, however, makes use of API calls to store environment data, allowing for higher-level programming in managing Python environments and packages (as opposed to storing directly on database).
+* This project was inspired by an older project called "py-pro-manager" (Python Project Manager). This web application, however, makes use of API calls to store environment data, allowing for higher-level programming in managing Python environments and packages (as opposed to a direct interaction between web application and database).
